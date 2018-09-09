@@ -7,13 +7,13 @@ Bonus: Can you do this in one pass?
 '''
 def day_1(arr, n):
   arr = sorted(arr)
-  j = len(arr) - 1
-  for i in range(j):
-    sum = arr[i] + arr[j]
-    if sum < x:
+  right = len(arr) - 1
+  for left in range(right):
+    sum = arr[i] + arr[right]
+    if sum < left:
       i += 1
-    elif sum > x:
-      j += 1
+    elif sum > left:
+      right += 1
     else:
       return True
  return False
