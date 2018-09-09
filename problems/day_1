@@ -8,10 +8,12 @@ Bonus: Can you do this in one pass?
 def day_1(arr, n):
   arr = sorted(arr)
   right = len(arr) - 1
-  for left in range(right):
-    sum = arr[i] + arr[right]
+  left = 0
+  
+  while left < right:
+    sum = arr[left] + arr[right]
     if sum < left:
-      i += 1
+      left += 1
     elif sum > left:
       right += 1
     else:
